@@ -63,13 +63,7 @@ def gen_position(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# ===== Helper for local testing (khong dung khi upload platform) =====
-
 def load_vn30f1m_1h() -> pd.DataFrame:
-    """Lay du lieu VN30F1M va resample 1m -> 1H voi format chuan.
-
-    Tra ve DataFrame co cac cot: Date, time, Open, High, Low, Close, volume.
-    """
     from quantvn.vn.data import get_derivatives_hist
 
     df = get_derivatives_hist("VN30F1M", "1m")
